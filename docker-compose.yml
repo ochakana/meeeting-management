@@ -1,0 +1,35 @@
+version: '3'
+services:
+  nuxt3_app:
+    build:
+      context: ./nuxt3_app
+      dockerfile: Dockerfile
+    volumes:
+      - ./nuxt3_app:/app/nuxt3_app
+      - /app/nuxt3_app/node_modules
+      - /app/nuxt3_app/.output
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    environment:
+      - MONGODB_URI=mongodb://db:27017/meeeting_management
+  python_app:
+    build:
+      context: ./python_app
+      dockerfile: Dockerfile
+    volumes:
+      - ./python_app:/app/python_app
+      - ./uploaded_files:/app/uploaded_files
+    ports:
+      - 5001:5001
+    depends_on:
+      - db
+    environment:
+      - MONGODB_URI=mongodb://db:27017/meeeting_management
+  db:
+    image: mongo:latest
+    volumes:
+      - ./mongodb_data:/data/db
+    ports:
+      - 27017:27017
