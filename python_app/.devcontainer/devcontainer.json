@@ -1,0 +1,31 @@
+{
+  "name": "python_app",
+  "dockerComposeFile": "../../docker-compose.yml",
+  "service": "python_app",
+  "workspaceFolder": "/app/python_app",
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.pythonPath": "/app/python_app/venv/bin/python",
+        "python.linting.pylintEnabled": true,
+        "python.linting.enabled": true,
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+        "python.autoComplete.extraPaths": [
+          "./venv/lib/python3.9/site-packages"
+        ],
+        "python.analysis.extraPaths": [
+          "./venv/lib/python3.9/site-packages"
+        ]
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.pylint"
+      ]
+    }
+  }
+}

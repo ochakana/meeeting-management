@@ -1,0 +1,4 @@
+/mongodb_data
+/python-app/src/modules/__pycache__/*.pyc
+/uploaded_files
+/python_app/src/modules/__pycache__/*.pyc

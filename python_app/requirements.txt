@@ -1,0 +1,6 @@
+pymongo
+black
+flask
+flask_cors
+pytest
+pytest-flask

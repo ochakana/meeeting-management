@@ -1,0 +1,25 @@
+{
+  "name": "nuxt3_app",
+  "dockerComposeFile": "../../docker-compose.yml",
+  "service": "nuxt3_app",
+  "workspaceFolder": "/app/nuxt3_app",
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "prettier.endOfLine": "lf"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "syler.sass-indented",
+        "oderwat.indent-rainbow",
+        "vscode-icons-team.vscode-icons",
+        "mubaidr.vuejs-extension-pack"
+      ]
+    }
+  }
+}
