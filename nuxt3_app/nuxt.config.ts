@@ -22,10 +22,9 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiUrl: process.env.API_URL || 'http://localhost:5001',
+      apiUrl: process.env.API_URL || "http://localhost:5010",
     },
   },
-
   vite: {
     define: {
       "process.env.DEBUG": false,

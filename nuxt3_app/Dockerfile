@@ -13,13 +13,14 @@ RUN yarn install
 COPY . .
 
 # アプリケーションをビルド
-RUN yarn build
+# RUN yarn build
 
-# ポート3000を公開
-EXPOSE 3000
+# ポート3010を公開
+EXPOSE 3010
 
 # ビルドされたアプリケーションを起動
-CMD ["yarn", "preview"]
+# CMD ["yarn", "preview"]
+CMD ["yarn", "dev"]
 
 # デバッグ
 # CMD [ "sleep", "infinity" ]

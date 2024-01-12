@@ -9,7 +9,7 @@ services:
       - /app/nuxt3_app/node_modules
       - /app/nuxt3_app/.output
     ports:
-      - 3000:3000
+      - 3010:3010
     depends_on:
       - db
     environment:
@@ -22,7 +22,7 @@ services:
       - ./python_app:/app/python_app
       - ./uploaded_files:/app/uploaded_files
     ports:
-      - 5001:5001
+      - 5010:5010
     depends_on:
       - db
     environment:
