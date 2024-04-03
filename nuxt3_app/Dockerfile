@@ -9,18 +9,17 @@ COPY package.json yarn.lock ./
 # 依存関係をインストール
 RUN yarn install
 
-# アプリケーションのソースコードをコピー
+# ソースコードをコピー
 COPY . .
 
 # アプリケーションをビルド
-# RUN yarn build
+RUN yarn build
 
 # ポート3010を公開
 EXPOSE 3010
 
-# ビルドされたアプリケーションを起動
-# CMD ["yarn", "preview"]
-CMD ["yarn", "dev"]
+# 起動
+CMD ["yarn", "preview"]
 
 # デバッグ
 # CMD [ "sleep", "infinity" ]
